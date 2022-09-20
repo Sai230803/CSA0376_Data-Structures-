@@ -1,17 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define Size 4 
-int Top=-1, inp_array[Size];
+int Top=-1, stack[Size];
 void Push();
 void Pop();
-void show();
+void peek();
+void display();
 int main()
 {
 	int choice;
 	while(1)	
 	{
 		printf("\nOperations performed by Stack");
-		printf("\n1.Push the element\n2.Pop the element\n3.Show\n4.End");
+		printf("\n1.Push\n2.Pop\n3.peek\n4.display\n5.stop");
 		printf("\n\nEnter the choice:");
 		scanf("%d",&choice);
 		switch(choice)
@@ -20,9 +21,11 @@ int main()
 					break;
 			case 2: Pop();
 					break;
-			case 3: show();
+			case 3: peek();
 					break;
-			case 4: exit(0);
+			case 4: display();
+			        break;
+			case 5: exit(0);        
 			default: printf("\nInvalid choice!!");
 		}
 	}
@@ -39,7 +42,7 @@ void Push()
 		printf("\nEnter element to be inserted to the stack:");
 		scanf("%d",&x);
 		Top=Top+1;
-		inp_array[Top]=x;
+		stack[Top]=x;
 	}
 } 
 void Pop()
@@ -50,11 +53,23 @@ void Pop()
 	}
 	else
 	{
-		printf("\nPopped element:  %d",inp_array[Top]);
+		printf("\nPopped element:  %d",stack[Top]);
 		Top=Top-1;
 	}
 } 
-void show()
+void peek()
+{
+    if(Top==-1)
+    {
+        printf("underflow");
+    }
+    else
+    {
+        printf("the top most element is:%d",stack[Top]);
+        
+    }
+}
+void display()
 {		
 	if(Top==-1)
 	{
@@ -62,8 +77,9 @@ void show()
 	}
 	else
 	{
+	    int i;
 		printf("\nElements present in the stack: \n");
-		for(int i=Top;i>=0;--i)
-			printf("%d\n",inp_array[i]);
+		for(i=Top;i>=0;i--)
+			printf("%d\n",stack[i]);
 	}
 }
