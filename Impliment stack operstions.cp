@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 #define Size 4 
 int Top=-1, stack[Size];
 void Push();
@@ -11,7 +10,6 @@ int main()
 	int choice;
 	while(1)	
 	{
-		printf("\nOperations performed by Stack");
 		printf("\n1.Push\n2.Pop\n3.peek\n4.display\n5.stop");
 		printf("\n\nEnter the choice:");
 		scanf("%d",&choice);
@@ -35,7 +33,7 @@ void Push()
 	int x;	
 	if(Top==Size-1)
 	{
-		printf("\nOverflow!!");
+		printf("Overflow!!\n");
 	}
 	else
 	{
@@ -49,7 +47,7 @@ void Pop()
 {
 	if(Top==-1)
 	{
-		printf("\nUnderflow!!");
+		printf("Underflow!!\n");
 	}
 	else
 	{
@@ -61,7 +59,7 @@ void peek()
 {
     if(Top==-1)
     {
-        printf("underflow");
+        printf("underflow\n");
     }
     else
     {
@@ -73,7 +71,7 @@ void display()
 {		
 	if(Top==-1)
 	{
-		printf("\nUnderflow!!");
+		printf("Underflow!!\n");
 	}
 	else
 	{
