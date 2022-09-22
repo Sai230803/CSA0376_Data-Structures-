@@ -21,7 +21,6 @@ int priority(char x)
         return 1;
     if(x == '*' || x == '/')
         return 2;
-    return 0;
 }
 int main()
 {
@@ -53,5 +52,5 @@ int main()
     while(top != -1)
     {
         printf("%c ",pop());
-    }return 0;
+    }
 }
