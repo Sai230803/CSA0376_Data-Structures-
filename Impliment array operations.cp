@@ -1,12 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
 int main()
 {
     int a[100];
     int element,i,loc,size,n,j,choice;
-    printf("C Program to Insert and Delete an Element in an Array using switch case\n");
-    printf("1. Inserting an Element in an Array\n");
-    printf("2. Deleting an Element in an Array\n");
+    printf("1.Insert\n2.Delete\n");
     printf("Select your choice : ");
     scanf("%d",&choice);
     switch(choice)
@@ -75,5 +72,4 @@ int main()
     default:
         printf("Wrong choice, Please try again later");
     }
-    return 0;
 }
