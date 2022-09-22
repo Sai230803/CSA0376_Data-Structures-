@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
-
 int main( )
 {
  int factorial(int);
@@ -9,12 +7,11 @@ int main( )
  scanf("%d",&n);
  f=factorial(n);
  printf("Factorial of the number is %d",f);
- getch();
 }
 int factorial(int n)
 {
   int f;
-  if(n==1)
+  if(n==0)
      return 1;
   else
      f=n*factorial(n-1);
