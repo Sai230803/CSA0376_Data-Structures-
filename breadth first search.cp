@@ -30,5 +30,5 @@ int main() {
 	  if(visited[i])
 	   printf("%d\t",i); else
 	   printf("\n Bfs is not possible");
-	//getch();
+	
 }
