@@ -65,6 +65,8 @@ break;
 search();
 break;
     case 4:exit(0);
+    default:
+     printf("invalid input");
 }
     }
 }
