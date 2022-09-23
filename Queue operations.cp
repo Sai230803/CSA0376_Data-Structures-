@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include<stdlib.h>
-#define MAX 6
+#define size 6
+int queue[size], rear=-1, front=-1,item;
 void enqueue();
 void dequeue();
 void display();
-int queue[MAX], rear=-1, front=-1, item;
 int main()
 {
 int ch;
@@ -33,7 +32,7 @@ printf("\n\nInvalid entry. Please try again...\n");
 }
 void enqueue()
 {
-if(rear == MAX-1)
+if(rear == size-1)
 printf("\nQueue is full.");
 else
 {
