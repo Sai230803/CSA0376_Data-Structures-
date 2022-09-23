@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
     int arr[50], size, i, j, k, element, index;
@@ -31,6 +30,4 @@ int main()
     printf("\nSorted Array:\n");
     for(i=0; i<size; i++)
         printf("%d ", arr[i]);
-    getch();
-    return 0;
 }
