@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 struct node
 {
      int data;
@@ -52,10 +51,7 @@ int main()
  
      printf("\nInorder traversal of binary tree is \n");
      printInorder(root);  
- 
+
      printf("\nPostorder traversal of binary tree is \n");
      printPostorder(root);
- 
-     getchar();
-     return 0;
 }
